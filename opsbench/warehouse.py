@@ -1,5 +1,5 @@
 """Build the DuckDB warehouse from a Synthea CSV export and run the review queries."""
-from datetime import date
+from datetime import date, timedelta
 from pathlib import Path
 
 import duckdb
@@ -63,14 +63,14 @@ def funnel(con, snapshot):
 
 
 def timeline(con, patient_id, snapshot, months=24):
-    """A patient's encounters in the months before the snapshot, newest first."""
-    set_snapshot(con, snapshot)
+    """A patient's encounters in the months before the snapshot, newest first. Read-only: no params table."""
+    cutoff = date.fromisoformat(str(snapshot)) + timedelta(days=1)
     return con.execute(f"""
         SELECT start_ts, encounter_class, description
-        FROM encounters, as_of
-        WHERE patient_id = ? AND start_ts < cutoff AND start_ts >= cutoff - INTERVAL {int(months)} MONTH
+        FROM encounters
+        WHERE patient_id = ? AND start_ts < ?::TIMESTAMP AND start_ts >= ?::TIMESTAMP - INTERVAL {int(months)} MONTH
         ORDER BY start_ts DESC
-    """, [patient_id]).df()
+    """, [patient_id, cutoff, cutoff]).df()
 
 
 def model_rows(con, snapshot):

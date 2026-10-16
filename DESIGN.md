@@ -6,6 +6,9 @@ Written before the test snapshot was scored. Changes after scoring are listed at
 
 - Synthea v4.0.0 (Apache-2.0), Massachusetts, seed 20261016, 10,000 living patients, reference and end date
   2026-01-01, 10 years of history, CSV export (`scripts/generate.sh`).
+- The JVM runs in UTC. Synthea writes birth dates in the JVM's time zone but timestamps in UTC. On a Berlin-time
+  machine, 8 of about 1,000 newborns had their first visit dated the day before birth. The data check
+  `encounters before birth` caught this.
 - Two runs with the same seed gave byte-identical patients, encounters, conditions and observations files.
 - Generated data is not committed. The CSVs carry SNOMED CT and LOINC codes, and Synthea's NOTICE puts SNOMED CT use
   under fair use and the IHTSDO affiliate terms. The repo therefore ships the generator settings and hand-written

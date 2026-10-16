@@ -4,7 +4,8 @@
 set -euo pipefail
 JAR=$1 OUT=$2 POP=$3 SEED=${4:-20261016}
 # Pinned: Synthea v4.0.0, fixed reference and end date (Synthea simulates up to "now" otherwise), CSV only.
-java -Xmx${JAVA_XMX:-6g} -jar "$JAR" \
+# UTC JVM: Synthea writes birth dates in the JVM time zone but timestamps in UTC.
+java -Xmx${JAVA_XMX:-6g} -Duser.timezone=UTC -jar "$JAR" \
   -s "$SEED" -cs "$SEED" -p "$POP" -r 20260101 -e 20260101 \
   --exporter.baseDirectory="$OUT" \
   --exporter.csv.export=true --exporter.fhir.export=false \
