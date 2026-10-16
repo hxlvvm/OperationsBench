@@ -1,0 +1,47 @@
+{
+  "snapshots": {
+    "train": "2023-12-31",
+    "test": "2024-12-31"
+  },
+  "n": {
+    "train": 5848,
+    "validation": 1972,
+    "test": 1921
+  },
+  "positives": {
+    "train": 820,
+    "validation": 252,
+    "test": 265
+  },
+  "validation_ap": {
+    "logreg_C0.01": 0.23535786088214292,
+    "logreg_C0.1": 0.2361001508111552,
+    "logreg_C1.0": 0.23622482043275064,
+    "hgb": 0.2050210923379811
+  },
+  "chosen_model": "logreg_C1.0",
+  "test": {
+    "baseline_prior_acute_use": {
+      "auroc": 0.5962446449731109,
+      "ap": 0.23098803870340595,
+      "capture_top10pct": 0.20790413054564
+    },
+    "logreg_C1.0": {
+      "auroc": 0.6662428219852339,
+      "ap": 0.333443904919371,
+      "capture_top10pct": 0.29056603773584905,
+      "brier": 0.10911844119959829
+    }
+  },
+  "model_minus_baseline_95ci": {
+    "ap": [
+      0.063763397542299,
+      0.14383439003943277
+    ],
+    "capture": [
+      0.0362830032193815,
+      0.12289286830462465
+    ]
+  },
+  "adopt_model": true
+}

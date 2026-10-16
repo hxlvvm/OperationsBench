@@ -7,9 +7,10 @@ Written before the test snapshot was scored. Changes after scoring are listed at
 - Synthea v4.0.0 (Apache-2.0), Massachusetts, seed 20261016, 10,000 living patients, reference and end date
   2026-01-01, 10 years of history, CSV export (`scripts/generate.sh`).
 - The JVM runs in UTC. Synthea writes birth dates in the JVM's time zone but timestamps in UTC. On a Berlin-time
-  machine, 8 of about 1,000 newborns had their first visit dated the day before birth. The data check
+  machine, 8 of 1,155 pilot patients had a newborn visit dated the day before birth. The data check
   `encounters before birth` caught this.
-- Two runs with the same seed gave byte-identical patients, encounters, conditions and observations files.
+- Two 1,000-patient runs with the same seed gave identical rows in patients, encounters, conditions and
+  observations (compared after sorting).
 - Generated data is not committed. The CSVs carry SNOMED CT and LOINC codes, and Synthea's NOTICE puts SNOMED CT use
   under fair use and the IHTSDO affiliate terms. The repo therefore ships the generator settings and hand-written
   fixtures only, and `scripts/generate.sh` rebuilds the data.
@@ -65,3 +66,7 @@ These are illustrative care opportunities, not validated quality measures (HEDIS
   capture) is above 0. Otherwise the model is not adopted and the README says so.
 - **Test runs:** the test snapshot is scored once. All results are on a synthetic population and say nothing about
   real patients.
+
+## Changes after scoring
+
+- 2026-10-16: corrected the wording of the determinism and time-zone notes. The evaluation is unchanged.

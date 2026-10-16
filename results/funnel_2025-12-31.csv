@@ -1,0 +1,10 @@
+opportunity,outcome,n
+ed_no_followup,OPEN,86
+ed_no_followup,window_open,35
+ed_no_followup,followed_up,33
+ed_no_followup,died,1
+overdue_wellness,up_to_date,6512
+overdue_wellness,under_18,2082
+overdue_wellness,died,1523
+overdue_wellness,OPEN,1243
+overdue_wellness,no_recent_contact,163

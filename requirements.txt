@@ -5,3 +5,4 @@ scikit-learn==1.6.1
 pytest==9.1.1
 streamlit==1.44.1
 altair==5.5.0
+scipy==1.18.1
