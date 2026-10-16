@@ -11,7 +11,7 @@ Written before the test snapshot was scored. Changes after scoring are listed at
   `encounters before birth` caught this.
 - Two 1,000-patient runs with the same seed gave identical rows in patients, encounters, conditions and
   observations (compared after sorting).
-- Generated data is not committed. The CSVs carry SNOMED CT and LOINC codes, and Synthea's NOTICE puts SNOMED CT use
+- Bulk generated data is not committed. The CSVs carry SNOMED CT and LOINC codes, and Synthea's NOTICE puts SNOMED CT use
   under fair use and the IHTSDO affiliate terms. The repo therefore ships the generator settings and hand-written
   fixtures only, and `scripts/generate.sh` rebuilds the data.
 

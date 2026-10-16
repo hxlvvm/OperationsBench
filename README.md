@@ -13,7 +13,7 @@ future acute care than ranking by past acute care?
 
 **Result.** All numbers are on synthetic Synthea patients (snapshot 2025-12-31, 10,000 patients):
 - **Queues:** 1,243 adults overdue for a wellness visit and 86 emergency visits with no follow-up.
-- **Tests:** 7 of 7 golden-fixture tests pass, covering the date-boundary rules.
+- **Tests:** 7 tests pass. Most run on hand-written golden fixtures that sit on the date boundaries.
 - **Experiment:** reviewing the top 10% of 1,921 held-out patients one year later caught **29.1%** of future acute
   care with logistic regression, against **20.8%** when ranking by prior acute use. The 95% CI for the difference
   is +3.6 to +12.3 points.
