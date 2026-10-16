@@ -1,0 +1,24 @@
+Id,START,STOP,PATIENT,ENCOUNTERCLASS,CODE,DESCRIPTION,TOTAL_CLAIM_COST
+e01,2024-09-30T10:00:00Z,2024-09-30T10:30:00Z,p01,wellness,162673000,General examination of patient (procedure),100
+e02,2024-10-01T00:00:00Z,2024-10-01T00:30:00Z,p02,wellness,162673000,General examination of patient (procedure),100
+e03,2024-01-01T10:00:00Z,2024-01-01T10:30:00Z,p03,wellness,162673000,General examination of patient (procedure),100
+e04,2026-01-01T08:00:00Z,2026-01-01T08:30:00Z,p03,wellness,162673000,General examination of patient (procedure),100
+e05,2024-01-01T10:00:00Z,2024-01-01T10:30:00Z,p04,wellness,162673000,General examination of patient (procedure),100
+e06,2025-03-01T10:00:00Z,2025-03-01T10:30:00Z,p05,wellness,410620009,Well child visit (procedure),100
+e07,2023-06-01T10:00:00Z,2023-06-01T10:30:00Z,p06,wellness,162673000,General examination of patient (procedure),100
+e08,2025-05-01T10:00:00Z,2025-05-01T10:30:00Z,p07,ambulatory,185345009,Encounter for symptom (procedure),100
+e09,2025-12-01T10:00:00Z,2025-12-01T12:00:00Z,p08,emergency,50849002,Emergency room admission (procedure),900
+e10,2025-12-15T10:00:00Z,2025-12-15T10:30:00Z,p08,ambulatory,185345009,Encounter for symptom (procedure),100
+e11,2025-12-01T10:00:00Z,2025-12-01T12:00:00Z,p09,emergency,50849002,Emergency room admission (procedure),900
+e12,2025-12-15T10:01:00Z,2025-12-15T10:30:00Z,p09,ambulatory,185345009,Encounter for symptom (procedure),100
+e13,2025-12-20T10:00:00Z,2025-12-20T12:00:00Z,p10,emergency,50849002,Emergency room admission (procedure),900
+e14,2025-12-05T10:00:00Z,2025-12-05T12:00:00Z,p11,emergency,50849002,Emergency room admission (procedure),900
+e15,2025-12-05T18:00:00Z,2025-12-08T10:00:00Z,p11,inpatient,32485007,Hospital admission (procedure),5000
+e16,2025-12-01T10:00:00Z,2025-12-02T10:00:00Z,p12,emergency,183460006,Obstetric emergency hospital admission (procedure),3000
+e17,2025-11-10T10:00:00Z,2025-11-10T12:00:00Z,p13,emergency,50849002,Emergency room admission (procedure),900
+e18,2025-12-25T10:00:00Z,2025-12-25T12:00:00Z,p14,emergency,50849002,Emergency room admission (procedure),900
+e19,2025-12-28T10:00:00Z,2025-12-28T10:30:00Z,p14,virtual,185345009,Encounter for symptom (procedure),100
+e20,2024-06-01T10:00:00Z,2024-06-01T10:30:00Z,p15,wellness,410620009,Well child visit (procedure),100
+e21,2025-06-01T10:00:00Z,2025-06-01T10:30:00Z,p12,wellness,162673000,General examination of patient (procedure),100
+e22,2025-03-01T10:00:00Z,2025-03-01T10:30:00Z,p17,wellness,162673000,General examination of patient (procedure),100
+e23,2025-12-01T10:00:00Z,2025-12-04T10:00:00Z,p17,inpatient,32485007,Hospital admission (procedure),5000

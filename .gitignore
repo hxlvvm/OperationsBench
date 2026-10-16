@@ -1,0 +1,6 @@
+jobs_local/
+data/
+.venv/
+__pycache__/
+.pytest_cache/
+*.duckdb
